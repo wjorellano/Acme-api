@@ -1,3 +1,6 @@
+# == Route Map
+#
+
 Rails.application.routes.draw do
   if Rails.env.development? || Rails.env.production? 
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"

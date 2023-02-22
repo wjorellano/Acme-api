@@ -13,5 +13,9 @@ module Types
     def test_field
       "Hello World!"
     end
+    
+    field :airlines, resolver: Queries::FetchAirlines
+    field :airplanes, resolver: Queries::FetchAirplanes
+    field :runways, resolver: Queries::FetchRunways
   end
 end
