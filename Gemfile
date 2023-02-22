@@ -39,10 +39,14 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'annotate', '~> 3.2'
 end
 
-group :development do
+group :development, :production do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'graphiql-rails'
 end
 
+gem 'graphql', '~> 2.0', '>= 2.0.12' # GraphQL is an implementation of GraphQL for Ruby
+gem 'sassc-rails', '~> 2.1', '>= 2.1.2' # SassC adapter for the Rails asset pipeline
